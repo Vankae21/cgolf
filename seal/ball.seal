@@ -1,0 +1,32 @@
+@ Ball
+
+@ -- Color
+int r = 255.
+int g = 255.
+int b = 255.
+
+@ -- Outline Color
+int outr = 0.
+int outg = 0.
+int outb = 0.
+int outa = 255.
+
+@ -- Line Color
+int lr = 255.
+int lg = 155.
+int lb = 0.
+int la = 255.
+
+@ -- Point Color
+int pr = 255.
+int pg = 0.
+int pb = 0.
+int pa = 255.
+
+@ -- Props
+float x = 96.
+float y = 96.
+float radius = 24.
+float out_rad = add(radius, 4).
+float point_rad = div(radius, 7).
+float line_thick = 16.

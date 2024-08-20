@@ -1,0 +1,29 @@
+@ Game
+
+bool DEBUG = true.
+
+int CELL_SIZE = 64.
+float FRICTION = 0.98.
+
+int ROWS = 12.
+int COLS = 8.
+
+int WIDTH = mul(COLS, CELL_SIZE).
+int HEIGHT = mul(ROWS, CELL_SIZE).
+string TITLE = "My Golf Game".
+int FPS = 60.
+
+string map = "
+gggwwwww
+gggwgggw
+wgwwwwgw
+wgwggwgw
+wgwggwgw
+wgwggwgw
+wgwggwgw
+wgwwwwgw
+wggggwgw
+wgwggggw
+wgwwwgww
+wwwgwwwg
+".
