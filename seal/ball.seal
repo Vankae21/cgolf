@@ -24,9 +24,10 @@ int pb = 0.
 int pa = 255.
 
 @ -- Props
-float x = 96.
-float y = 96.
-float radius = 24.
+float x = 32.
+float y = 32.
+float radius = 16.
+float shrink_radius = 16.
 float out_rad = add(radius, 4).
 float point_rad = div(radius, 7).
 float line_thick = 16.

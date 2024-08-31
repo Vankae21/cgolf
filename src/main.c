@@ -15,6 +15,7 @@ int main()
     HEIGHT = seal_int(seal, "HEIGHT");
     TITLE = seal_string(seal, "TITLE");
     FPS = seal_int(seal, "FPS");
+    PARTICLE_MAX_SIZE = seal_int(seal, "PARTICLE_MAX_SIZE");
 
     InitWindow(WIDTH, HEIGHT, TITLE);
 

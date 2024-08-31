@@ -1,9 +1,9 @@
 @ Game
 
-bool DEBUG = true.
+bool DEBUG = false.
 
 int CELL_SIZE = 64.
-float FRICTION = 0.98.
+float FRICTION = 0.
 
 int ROWS = 12.
 int COLS = 8.
@@ -12,18 +12,6 @@ int WIDTH = mul(COLS, CELL_SIZE).
 int HEIGHT = mul(ROWS, CELL_SIZE).
 string TITLE = "My Golf Game".
 int FPS = 60.
+int PARTICLE_MAX_SIZE = 256.
 
-string map = "
-gggwwwww
-gggwgggw
-wgwwwwgw
-wgwggwgw
-wgwggwgw
-wgwggwgw
-wgwggwgw
-wgwwwwgw
-wggggwgw
-wgwggggw
-wgwwwgww
-wwwgwwwg
-".
+string font_path = "assets/JOYSTIX_MONOSPACE.otf".

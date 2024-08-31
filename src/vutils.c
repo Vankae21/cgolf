@@ -33,6 +33,11 @@ bool is_rec_circle_colliding(Rectangle rec, Circle cir)
 	return true;
 }
 
+bool are_circles_colliding(Circle cir1, Circle cir2)
+{
+	return vec2_distance(cir1.center, cir2.center) < cir1.radius + cir2.radius;
+}
+
 float vec2_distance(Vector2 vec_a, Vector2 vec_b)
 {
 	return sqrtf((vec_a.x - vec_b.x) * (vec_a.x - vec_b.x) + (vec_a.y - vec_b.y) * (vec_a.y - vec_b.y));
@@ -83,4 +88,14 @@ float random_val(float min, float max)
     // Scale and shift the range to [min, max)
     float range = max - min;
     return min + random_0_1 * range;
+}
+
+Vector2 vec2_mul(Vector2 vec, float mul)
+{
+	return (Vector2) { vec.x * mul, vec.y * mul };
+}
+
+Vector2 xy(float x, float y)
+{
+	return (Vector2) {x, y};
 }

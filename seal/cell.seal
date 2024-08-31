@@ -1,19 +1,24 @@
 @ Cell
 @ range 0-255
 
-@ -- Cell Color 0 --
-@ 66, 237, 81
-int r0 = 120.
-int g0 = 255.
-int b0 = 81.
+float SAND_SPEED_DECREASE = 0.4.
 
-@ -- Cell Color 1 --
-@ 219, 232, 39
-int r1 = 255.
-int g1 = 255.
-int b1 = 13.
+@ -- Ground Color --
+int gr = 120.
+int gg = 255.
+int gb = 81.
+
+@ -- Sand Color --
+int sr = 255.
+int sg = 255.
+int sb = 13.
 
 @ -- Wall Color --
 int wr = 120.
 int wg = 120.
 int wb = 120.
+
+@ -- Hole Color --
+int hr = 10.
+int hg = 20.
+int hb = 5.
