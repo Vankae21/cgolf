@@ -5,6 +5,7 @@
 #include "ball.h"
 #include "cell.h"
 #include "level.h"
+#include "particle.h"
 #include <stdbool.h>
 #include <stdlib.h>
 
@@ -24,13 +25,16 @@ extern int WIDTH;
 extern int HEIGHT;
 extern char* TITLE;
 extern int FPS;
-
 extern size_t PARTICLE_MAX_SIZE;
 
 typedef enum {
 	MENU,
-	GAME
+	LEVEL_SELECTION,
+	GAME,
+	PAUSE
 } GameState;
+
+extern GameState GAME_STATE;
 
 void start();
 void update();
@@ -41,6 +45,9 @@ void finish();
 void reset_ball(Ball* ball);
 
 // level
-void load_next_level(Level** levels, Ball* ball, unsigned* map_i);
+void load_level(Level** levels, Ball* ball, Particle** particles, unsigned map_i);
+void load_next_level(Level** levels, Ball* ball, Particle** particles, unsigned* map_i);
+
+void quit_game();
 
 #endif

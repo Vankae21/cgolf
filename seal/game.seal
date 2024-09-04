@@ -10,7 +10,7 @@ int COLS = 8.
 
 int WIDTH = mul(COLS, CELL_SIZE).
 int HEIGHT = mul(ROWS, CELL_SIZE).
-string TITLE = "My Golf Game".
+string TITLE = "C Golf".
 int FPS = 60.
 int PARTICLE_MAX_SIZE = 256.
 

@@ -1,5 +1,11 @@
 #!/bin/bash
 
+CC="gcc"
+
+if [ "$1" == "win" ]; then
+	CC="x86_64-w64-mingw32-gcc"
+fi
+
 SRC_DIR="src"
 INCLUDE_DIR="$SRC_DIR/include"
 OBJ_DIR="objects"
@@ -12,6 +18,6 @@ for file in $SRC_DIR/*.c; do
 	gcc -c $file -I $INCLUDE_DIR -o "$OBJ_DIR/$(basename $file .c).o" $FLAGS
 done
 
-gcc $OBJ_DIR/*.o -o $OUT $FLAGS
+$CC $OBJ_DIR/*.o -o $OUT $FLAGS
 
 rm -r $OBJ_DIR

@@ -1,0 +1,3 @@
+@ Button
+int BUTTON_X = 192.
+int BUTTON_Y = 64.

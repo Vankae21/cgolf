@@ -1,6 +1,7 @@
 #ifndef BALL_H
 #define BALL_H
 
+#include "soundmanager.h"
 #include <raylib.h>
 
 typedef struct {
@@ -12,7 +13,7 @@ typedef struct {
 } Ball;
 
 Ball* init_ball();
-void update_ball(Ball* ball);
+void update_ball(Ball* ball, SoundManager* sman);
 void draw_ball(Ball* ball);
 
 #endif

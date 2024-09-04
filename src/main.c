@@ -18,6 +18,7 @@ int main()
     PARTICLE_MAX_SIZE = seal_int(seal, "PARTICLE_MAX_SIZE");
 
     InitWindow(WIDTH, HEIGHT, TITLE);
+    InitAudioDevice();
 
     SetTargetFPS(FPS);
 
@@ -34,6 +35,7 @@ int main()
         EndDrawing();
     }
 
+    CloseAudioDevice();
     CloseWindow();
     
     finish();

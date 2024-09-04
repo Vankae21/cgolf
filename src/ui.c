@@ -6,10 +6,20 @@
 
 void ui_draw_shot_count(Font font, unsigned shot_count)
 {
-	unsigned font_size = 32;
+	float font_size = 32;
 
 	char shot_count_text[32];
 	sprintf(shot_count_text, "Shot:%d", shot_count);
+	Vector2 text_measure = MeasureTextEx(font, shot_count_text, font_size, 0);
+	DrawTextEx(font, shot_count_text, xy((WIDTH - text_measure.x) / 2, 0), font_size, 0, BLACK);
+}
+
+void ui_draw_timer(Font font, float time)
+{
+	float font_size = 32;
+
+	char shot_count_text[32];
+	sprintf(shot_count_text, "%0.2f", time);
 	Vector2 text_measure = MeasureTextEx(font, shot_count_text, font_size, 0);
 	DrawTextEx(font, shot_count_text, xy((WIDTH - text_measure.x) / 2, 0), font_size, 0, BLACK);
 }

@@ -65,3 +65,10 @@ void deactivate_particle(Particle* p)
 	p->is_active = false;
 	p->live_timer = 0;
 }
+
+void deactivate_all_particles(Particle** particles)
+{
+	for (int i = 0; i < PARTICLE_MAX_SIZE; i++) {
+		deactivate_particle(particles[i]);
+	}
+}

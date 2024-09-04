@@ -26,5 +26,6 @@ void create_particles(Particle** particles,
 									 float side_len,
 									 float max_live_time);
 void deactivate_particle(Particle* p);
+void deactivate_all_particles(Particle** particles);
 
 #endif

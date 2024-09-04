@@ -1,6 +1,7 @@
 @ Level 
 
 int LEVEL_SIZE = 9.
+int LEVEL_BUTTON_SIZE = 80.
 
 string map0 = "
 gwwwwwgo

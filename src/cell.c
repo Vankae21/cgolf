@@ -182,22 +182,22 @@ void change_cells(char* map, Cell** cells, unsigned rows, unsigned cols)
 		cells[i]->left_cell = (void*)0;	
 
 		if (i - COLS >= 0) {
-			if (cells[i - COLS]->type == WALL) {				
+			if (cells[i - COLS]->type == WALL) {
 				cells[i]->upper_cell = cells[i - COLS];
 			}
 		}
 		if (i + COLS < ROWS * COLS) {
-			if (cells[i + COLS]->type == WALL) {				
+			if (cells[i + COLS]->type == WALL) {
 				cells[i]->lower_cell = cells[i + COLS];
 			}
 		}
 		if (i - 1 >= 0) {
-			if (cells[i - 1]->type == WALL) {				
+			if (cells[i - 1]->type == WALL) {
 				cells[i]->left_cell = cells[i - 1];
 			}
 		}
 		if (i + 1 < ROWS * COLS) {
-			if (cells[i + 1]->type == WALL) {				
+			if (cells[i + 1]->type == WALL) {
 				cells[i]->right_cell = cells[i + 1];
 			}
 		}

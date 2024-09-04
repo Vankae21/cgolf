@@ -1,5 +1,6 @@
 #include "include/ball.h"
 #include "include/game.h"
+#include "include/soundmanager.h"
 #include "include/vutils.h"
 #include "sealapi/include/sealapi.h"
 #include <raylib.h>
@@ -31,7 +32,7 @@ Ball* init_ball()
 	return ball;
 }
 
-void update_ball(Ball* ball)
+void update_ball(Ball* ball, SoundManager* sman)
 {
 	Vector2 mouse = GetMousePosition();
 
@@ -48,6 +49,9 @@ void update_ball(Ball* ball)
 		}
 		ball->can_get_shot = false;
 		ball->shot_count++;
+
+		// sound
+		play_ball_hit_sound(sman);
 	}
 
 	ball->pos.x += ball->velo.x * GetFrameTime();
@@ -85,7 +89,7 @@ void draw_ball(Ball* ball)
 	Vector2 dir = vec2_normalize((Vector2) { mouse.x - ball->pos.x, mouse.y - ball->pos.y });
 	Vector2 max_line_pos = { .x = ball->pos.x + dir.x * distance, .y = ball->pos.y + dir.y * distance };
 
-	if (IsMouseButtonDown(0) && ball->can_get_shot) {
+	if (IsMouseButtonDown(0) && ball->can_get_shot && GAME_STATE == GAME) {
 		DrawLineEx(ball->pos, max_line_pos, ball->line_thick, line_color);
 	}
 }
