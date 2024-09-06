@@ -13,6 +13,7 @@ SoundManager* init_sound_manager()
 		sman->ball_hit_sounds[i] = LoadSound(sound_path);
 	}
 	sman->ball_in_hole_sound = LoadSound("assets/ball_in_hole.ogg");
+	sman->button_sound = LoadSound("assets/blipSelect.wav");
 
 	return sman;
 }

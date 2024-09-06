@@ -102,22 +102,22 @@ void start()
 void update()
 {
 	if (GAME_STATE == MENU) {
-		if (is_button_pressed(play_button)) {
+		if (is_button_pressed(play_button, sman)) {
 			GAME_STATE = LEVEL_SELECTION;
-		} else if (is_button_pressed(quit_button)) {
+		} else if (is_button_pressed(quit_button, sman)) {
 			quit_game();
 		}
 		return;
 	} else if (GAME_STATE == LEVEL_SELECTION) {
 		for (int i = 0; i < LEVEL_SIZE; i++) {
-			if (is_button_pressed(level_buttons[i])) {
+			if (is_button_pressed(level_buttons[i], sman)) {
 				// start the level
 				GAME_STATE = GAME;
 				map_i = i;
 				load_level(levels, ball, particles, map_i);
 			}
 		}
-		if (is_button_pressed(return_button)) {
+		if (is_button_pressed(return_button, sman)) {
 			GAME_STATE = MENU;
 		}
 		return;
@@ -136,9 +136,9 @@ void update()
 		GAME_STATE = GAME_STATE == PAUSE ? GAME : PAUSE;
 	}
 	if (GAME_STATE == PAUSE) {
-		if (is_button_pressed(replay_button)) {
+		if (is_button_pressed(replay_button, sman)) {
 			load_level(levels, ball, particles, map_i);
-		} else if (is_button_pressed(level_selection_button)) {
+		} else if (is_button_pressed(level_selection_button, sman)) {
 			GAME_STATE = LEVEL_SELECTION;
 		}
 		return;

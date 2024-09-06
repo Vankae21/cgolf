@@ -16,7 +16,7 @@ Button* init_button(Vector2 size, Vector2 pos, char* text, float font_size)
     return button;
 }
 
-bool is_button_pressed(Button* button)
+bool is_button_pressed(Button* button, SoundManager* sman)
 {
     if(GetMousePosition().x < button->pos.x ||
     GetMousePosition().x > button->pos.x + button->size.x ||
@@ -32,6 +32,7 @@ bool is_button_pressed(Button* button)
         button->state = HOLD;
     } else if(IsMouseButtonReleased(0) && button->state == HOLD) {
         button->state = OVER;
+        PlaySound(sman->button_sound);
         return true;
     }
     return false;

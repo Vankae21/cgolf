@@ -7,6 +7,7 @@
 
 typedef struct {
 	Sound ball_in_hole_sound;
+	Sound button_sound;
 	Sound* ball_hit_sounds;
 } SoundManager;
 
